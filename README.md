@@ -1,1 +1,1 @@
-This is flask mongodb project for ecommerce app
+This is flask mongodb project for ecommerce app.
