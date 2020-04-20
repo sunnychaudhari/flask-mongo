@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <h4 style="text-align:center;">Your cart</h4>
+    </div>
+    <div class="cart_div">
+        <table style="width:50%">
+            <tr>
+                <th>Product</th>
+                <th>Color</th>
+                <th>Quantity</th>
+                <th>Size</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Monte Carlo</td>
+                <td>Green</td>
+                <td>
+                    <select id="qty">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                </td>
+                <td>L</td>
+                <td>Rs. 1100</td>
+            <tr/>
+            <tr>
+                <td>GAP</td>
+                <td>White</td>
+                <td>
+                    <select id="qty">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                </td>
+                <td>L</td>
+                <td>Rs. 1200</td>
+            <tr/>
+        </table>
+        <h3>Total :  Rs. 2300</h3>
+        <hr/>
+        <a class="checkoutButton" href="/checkout">Proceed To Checkout</a>
+    </div>
+</div>
+{% endblock %}

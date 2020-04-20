@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <h4 style="text-align:center;">Welcome to estore for T-Shirts</h4>
+    </div>
+    <div class="products_div">
+        <table style="width:50%">
+            <tr>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Price</th>
+                <th>Size</th>
+            </tr>
+           {% for p in all_products %}
+           <tr>
+                <td>{{ p.name }}</td>
+                <td>{{ p.color }}</td>
+                <td>{{ p.price }}</td>
+                <td>
+                    <select id="size">
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
+                </td>
+                <td>
+                    <a class="LinkButton" value="{{p._id}}">Add To Cart</a>
+                </td>
+           </tr>
+           {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
